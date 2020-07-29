@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+    <title>PissCord</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css"
+      integrity="sha512-zzq8ZrbhP7DGbwClbqSYuo+di3FvAlMNykCKWE6pHuqmCgGjJSISDTzy7QkdI2ajLlgw0nx6hxIu8os2hYuN8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto+Slab:100,200,300,regular,500,600,700,800,900"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="light">
+    <div class="wrapper">
+      <div class="title" id="titleBar">
+        <a href="./index.html">
+        <div class="red"></div></a>
+        <div class="yellow"></div>
+        <div class="green"></div>
+        <div id="title">
+          PissCord
+        </div>
+      </div>
+      <div class="main">
+        <div class="chatScreen" id="chatScreen">
+        </div>
+        <div class="inputBox">
+            <form id="chatForm" autocomplete="off">
+                <input type="text" id="inputBox" placeholder="Type Message Here...">
+                <input type="submit" value="Send">
+            </form>
+        </div>
+      </div>
+    </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.9.4/qs.min.js" integrity="sha512-BHtomM5XDcUy7tDNcrcX1Eh0RogdWiMdXl3wJcKB3PFekXb3l5aDzymaTher61u6vEZySnoC/SAj2Y/p918Y3w==" crossorigin="anonymous"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let titleBar = document.getElementById('titleBar');
+    titleBar.addEventListener('click', function(){
+      document.body.style.transition = '.5s';
+      document.body.className = document.body.className == 'dark' ? 'light' : 'dark';
+    })
+  </script>
+
+</body>
+</html>
